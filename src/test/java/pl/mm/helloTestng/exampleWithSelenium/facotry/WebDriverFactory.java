@@ -14,7 +14,7 @@ public class WebDriverFactory {
         //noinspection SwitchStatementWithTooFewBranches
         switch (driverType) {
             case CHROME:
-                System.setProperty("webdriver.chrome.driver", Paths.get(ClassLoader.getSystemResource("chromedriver80.0.3987.16.exe").toURI()).toString());
+                System.setProperty("webdriver.chrome.driver", Paths.get(ClassLoader.getSystemResource("chromedriver.exe").toURI()).toString());
                 webDriver = new ChromeDriver();
                 break;
         }

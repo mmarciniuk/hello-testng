@@ -4,6 +4,7 @@
     <test name="Test - All from TestNGExample">
         <classes>
             <class name="pl.mm.helloTestng.TestNGExample"/>
+            <class name="pl.mm.helloTestng.TestNGExample2"/>
         </classes>
     </test>
 </suite>

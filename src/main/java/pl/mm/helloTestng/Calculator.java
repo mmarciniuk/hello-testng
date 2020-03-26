@@ -3,7 +3,13 @@ package pl.mm.helloTestng;
 public class Calculator {
 
     public double addition(double... numbers) {
-        return 0;
+        double result = 0;
+
+        for(double number : numbers) {
+            result += number;
+        }
+
+        return result;
     }
 
     public double subtraction(double... numbers) {

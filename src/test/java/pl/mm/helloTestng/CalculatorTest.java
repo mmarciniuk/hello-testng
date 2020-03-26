@@ -1,6 +1,7 @@
 package pl.mm.helloTestng;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class CalculatorTest {
@@ -53,6 +54,24 @@ public class CalculatorTest {
 
         //then
         Assert.assertEquals(result, expectedResult);
+    }
+
+    @Test(dataProvider = "testDataProvider", threadPoolSize = 2)
+    public void testAddition_ShouldEndWithSuccess2(double number1, double number2, double expectedResult) {
+        //when
+        double result = calculator.addition(number1, number2);
+
+        //then
+        Assert.assertEquals(result, expectedResult);
+    }
+
+    @DataProvider(parallel = true)
+    public Object[][] testDataProvider() {
+        return new Object[][] {
+                {1, 2, 3},
+                {26, 2020, 2046},
+                {5, 10, 20}
+        };
     }
 
 }

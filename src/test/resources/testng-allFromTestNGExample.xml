@@ -6,9 +6,10 @@
             <class name="pl.mm.helloTestng.TestNGExample">
                 <methods>
                     <include name="testWithSuccess"/>
-                    <include name="testWithExpectedException" invocation-numbers="2"/>
+                    <include name="testWithExpectedException" />
                 </methods>
             </class>
+            <class name="pl.mm.helloTestng.TestNGExample2"/>
         </classes>
     </test>
 </suite>

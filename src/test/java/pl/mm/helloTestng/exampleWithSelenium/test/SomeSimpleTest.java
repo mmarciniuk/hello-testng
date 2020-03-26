@@ -24,12 +24,15 @@ public class SomeSimpleTest {
     public void basicTest() throws InterruptedException {
         GoogleBasePage page = new GoogleBasePage(webDriver)
                 .takeAScreenshot()
+                .validate()
                 .sleep(5000)
                 .searchPhrase("Java")
                 .takeAScreenshot()
+                .validate()
                 .sleep(5000)
                 .clickSearchInGoogleButton()
                 .takeAScreenshot()
+                .validate()
                 .sleep(15000);
 
         Assert.assertNotNull(page);
